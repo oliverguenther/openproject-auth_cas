@@ -17,7 +17,7 @@ omniauth-cas specifies the requirement omniauth ~> 1.1.0. However, as OpenProjec
 
 Simply create a ``Gemfile.local`` in your OpenProject root with the following content:
 
-	gem 'omniauth-cas', git: https://github.com/oliverguenther/omniauth-cas
+	gem 'omniauth-cas', git: 'https://github.com/oliverguenther/omniauth-cas'
 	
 ## Requirements
 
