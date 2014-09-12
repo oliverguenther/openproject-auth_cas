@@ -18,10 +18,10 @@ module OpenProject::AuthCas::Patches
         info = auth[:info]
 
         # Grab the default attribute mapping
-        hash = omniauth_hash_to_user_attributes_without_username
+        hash = omniauth_hash_to_user_attributes_without_username(auth)
 
         # Override username if applicable
-        hash[:login] = info[:uid] if info[:uid]
+        hash[:login] = auth[:uid] if auth[:uid]
 
         hash
       end
