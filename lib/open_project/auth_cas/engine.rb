@@ -24,5 +24,10 @@ module OpenProject::AuthCas
         Rails.logger.warn("[auth_cas] Missing settings from '#{settings}', skipping omniauth registration.")
       end
     end
+
+
+    config.to_prepare do
+      require_dependency "open_project/auth_cas/patches/omniauth_login_patch"
+    end
   end
 end
