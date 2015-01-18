@@ -20,10 +20,10 @@ module OpenProject
         if settings.exist?
           providers = YAML::load(File.open(settings)).symbolize_keys
           strategy :cas do
-            symbols = providers.values.map(&:symbolize_keys)
-            symbols[:openproject_attribute_map] = Proc.new { |auth| { login: auth[:uid] } }
-
-            symbols
+            providers.values.map do |h|
+              h[:openproject_attribute_map] = Proc.new { |auth| { login: auth[:uid] } }
+              h.symbolize_keys
+            end
           end
         else
           Rails.logger.warn("[auth_cas] Missing settings from '#{settings}', skipping omniauth registration.")
