@@ -13,7 +13,7 @@ Add the following entries to your `Gemfile.plugins` in your OpenProject root dir
 
 **Important!**
 
-omniauth-cas specifies the requirement omniauth ~> 1.1.0. However, as OpenProject depends on omniauth ~> 1.2.0, you can use my fork of the project that fixes this until the gem itself is updated: 
+omniauth-cas specifies the requirement omniauth ~> 1.1.0. However, as OpenProject depends on omniauth ~> 1.2.0, you can use my fork of the project that fixes this until the gem itself is updated:
 
 Simply create a ``Gemfile.local`` in your OpenProject root with the following content:
 
@@ -23,7 +23,7 @@ Simply create a ``Gemfile.local`` in your OpenProject root with the following co
 
 * [omniauth-cas gem](https://github.com/dlindahl/omniauth-cas) > 1.0.4
 * [OpenProject](http://openproject.org) > 4.0
-* [openproject-auth](https://github.com/opf/openproject-auth_plugins)	
+* [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins)
 
 
 ## Configuration
@@ -37,7 +37,7 @@ with the following contents:
 	your-provider-name:
 	  name: "your-provider-name"
 	  url: "https://sso.example.org"
-	  display_name: "My CAS provider"	
+	  display_name: "My CAS provider"
 	  # Use the default CAS icon
 	  icon: "auth_provider-cas.png"
 	  # Extended Attributes mapping
