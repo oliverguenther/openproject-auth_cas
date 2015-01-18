@@ -1,27 +1,24 @@
 # OpenProject OmniAuth CAS Single-Sign On
 ![](https://github.com/oliverguenther/openproject-auth_cas/blob/dev/app/assets/images/auth_provider-cas.png)
 
+[![Dependency Status](https://gemnasium.com/oliverguenther/openproject-auth_cas.svg)](https://gemnasium.com/oliverguenther/openproject-auth_cas)
+[![Code Climate](https://codeclimate.com/github/oliverguenther/openproject-auth_cas/badges/gpa.svg)](https://codeclimate.com/github/oliverguenther/openproject-auth_cas)
+
+
 This plugin provides the [OmniAuth CAS strategy](https://github.com/dlindahl/omniauth-cas) into OpenProject.
 
 ## Installation
 
 Add the following entries to your `Gemfile.plugins` in your OpenProject root directory:
 
-	gem 'openproject-auth_plugins', :git => 'https://github.com/opf/openproject-auth_plugins', :branch => 'dev'
-	gem "openproject-auth_cas", :git => 'https://github.com/oliverguenther/openproject-auth_cas', :branch => 'dev'
+	gem 'openproject-auth_plugins', git: 'https://github.com/opf/openproject-auth_plugins', branch: 'dev'
+	gem "openproject-auth_cas", git: 'https://github.com/oliverguenther/openproject-auth_cas', branch: 'dev'
 
 
-**Important!**
 
-omniauth-cas specifies the requirement omniauth ~> 1.1.0. However, as OpenProject depends on omniauth ~> 1.2.0, you can use my fork of the project that fixes this until the gem itself is updated:
-
-Simply create a ``Gemfile.local`` in your OpenProject root with the following content:
-
-	gem 'omniauth-cas', git: 'https://github.com/oliverguenther/omniauth-cas'
-	
 ## Requirements
 
-* [omniauth-cas gem](https://github.com/dlindahl/omniauth-cas) > 1.0.4
+* [omniauth-cas gem](https://github.com/dlindahl/omniauth-cas) > 1.1.0
 * [OpenProject](http://openproject.org) > 4.0
 * [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins)
 
@@ -52,7 +49,7 @@ If you have the use-case of multiple CAS / Single-Sign On providers, simply add 
 	  
 ### Custom Provider Icon
 
-To add a custom icon to be rendered as your omniauth provider icon, add an image asset and reference it in your `settings.yml`:
+To add a custom icon to be rendered as your omniauth provider icon, add an image asset to OpenProject and reference it in your `settings.yml`:
 
 	icon: "my/asset/path/to/icon.png"
 	
