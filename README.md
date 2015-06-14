@@ -11,8 +11,8 @@ This plugin provides the [OmniAuth CAS strategy](https://github.com/dlindahl/omn
 
 Add the following entries to your `Gemfile.plugins` in your OpenProject root directory:
 
-	gem 'openproject-auth_plugins', git: 'https://github.com/opf/openproject-auth_plugins', branch: 'dev'
-	gem "openproject-auth_cas", git: 'https://github.com/oliverguenther/openproject-auth_cas', branch: 'dev'
+	gem 'openproject-auth_plugins', git: 'git@github.com:finnlabs/openproject-auth_plugins', branch: 'stable'
+	gem "openproject-auth_cas", git: 'git@github.com:oliverguenther/openproject-auth_cas', branch: 'stable'
 
 
 
