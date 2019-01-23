@@ -1,4 +1,6 @@
 require 'omniauth-cas'
+require 'open_project/auth_plugins'
+
 module OpenProject
   module AuthCas
     class Engine < ::Rails::Engine
