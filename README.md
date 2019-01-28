@@ -11,16 +11,23 @@ This plugin provides the [OmniAuth CAS strategy](https://github.com/dlindahl/omn
 
 Add the following entries to your `Gemfile.plugins` in your OpenProject root directory:
 
-	gem 'openproject-auth_plugins', git: 'git@github.com:finnlabs/openproject-auth_plugins', branch: 'stable'
-	gem "openproject-auth_cas", git: 'git@github.com:oliverguenther/openproject-auth_cas', branch: 'stable'
+```
+gem "openproject-auth_cas", git: 'git@github.com:oliverguenther/openproject-auth_cas', branch: 'stable'
+```
 
+For OpenProject < 8.2.0, please manually add the Auth Plugins gem before adding `openproject-auth_cas`:
+
+```
+gem 'openproject-auth_plugins', git: 'git@github.com:finnlabs/openproject-auth_plugins', branch: 'stable'
+gem "openproject-auth_cas", git: 'git@github.com:oliverguenther/openproject-auth_cas', branch: 'stable'
+```
 
 
 ## Requirements
 
-* [omniauth-cas gem](https://github.com/dlindahl/omniauth-cas) > 1.1.0
-* [OpenProject](http://openproject.org) > 4.0
-* [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins)
+* [omniauth-cas gem](https://github.com/dlindahl/omniauth-cas)
+* [OpenProject](http://openproject.org)
+* [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins) (Included in OpenProject core since 8.2.0)
 
 
 ## Configuration
@@ -57,6 +64,6 @@ To add a custom icon to be rendered as your omniauth provider icon, add an image
 ## Copyrights & License
 OpenProject CAS Auth is completely free and open source and released under the [MIT License](https://github.com/oliverguenther/openproject-auth_cas/blob/dev/LICENSE).
 
-Copyright (c) 2014 Oliver Günther (mail@oliverguenther.de)
+Copyright (c) 2014-2019 Oliver Günther (mail@oliverguenther.de)
 
 The default provider icon is a combination of icons from [Font Awesome by Dave Gandy](http://fontawesome.io).
